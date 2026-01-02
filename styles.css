@@ -5,18 +5,18 @@
   box-sizing: border-box;
 }
 
-/* ROOT COLORS – easy to tweak later */
+/* COLORS */
 :root {
-  --deep-green: #0e2b1c;
-  --lime: #c8ff00;
-  --purple: #5a2d82;
-  --red: #c62828;
-  --white: #f5f5f5;
+  --deep-green: #0e2b1c;   /* Flyer green */
+  --lime: #c8ff00;         /* Accent lime */
+  --purple: #5a2d82;       /* NIFES logo purple */
+  --red: #c62828;           /* Flyer red badge */
+  --white: #f5f5f5;        
 }
 
 /* BODY */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: var(--deep-green);
   color: var(--white);
 }
@@ -51,6 +51,7 @@ body {
 .top-title {
   font-weight: bold;
   letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* HERO CONTENT */
@@ -64,17 +65,20 @@ body {
 .welcome {
   font-size: 1rem;
   margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .ltc {
   font-size: 6rem;
   color: var(--lime);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
 }
 
 .theme {
   font-size: 1.5rem;
   margin: 20px 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .theme span {
@@ -100,6 +104,7 @@ body {
   text-align: center;
   margin-bottom: 30px;
   color: var(--lime);
+  font-family: 'Montserrat', sans-serif;
 }
 
 form {
@@ -132,10 +137,12 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin-top: 15px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  opacity: 0.85;
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .success {
