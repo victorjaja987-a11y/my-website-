@@ -1,54 +1,153 @@
-/* Basic Reset */
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ROOT COLORS – easy to tweak later */
+:root {
+  --deep-green: #0e2b1c;
+  --lime: #c8ff00;
+  --purple: #5a2d82;
+  --red: #c62828;
+  --white: #f5f5f5;
+}
+
+/* BODY */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--deep-green);
+  color: var(--white);
 }
 
-.hero-section {
-    text-align: center;
-    margin-bottom: 40px;
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url("background.jpg") center/cover no-repeat;
 }
 
-.signup-form-section {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
 
-.signup-form-section label {
-    display: block;
-    margin-bottom: 8px;
+/* TOP BAR */
+.top-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 
-.signup-form-section input, .signup-form-section select, .signup-form-section textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.logo {
+  width: 60px;
+  margin-right: 15px;
 }
 
-.signup-form-section button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+.top-title {
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.signup-form-section button:hover {
-    background-color: #0056b3;
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.welcome {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.ltc {
+  font-size: 6rem;
+  color: var(--lime);
+  font-weight: 900;
+}
+
+.theme {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.theme span {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.date-badge {
+  display: inline-block;
+  background: var(--red);
+  padding: 10px 18px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* SIGNUP SECTION */
+.signup-section {
+  background: #102f22;
+  padding: 50px 20px;
+}
+
+.signup-section h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--lime);
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  background: var(--lime);
+  color: #000;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.success {
+  display: none;
+  margin-top: 15px;
+  color: var(--lime);
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .ltc {
+    font-size: 4rem;
+  }
 }
